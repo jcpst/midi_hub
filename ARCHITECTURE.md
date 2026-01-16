@@ -85,7 +85,7 @@ MIDI IN ──┬─── H11L1M ───────────────�
 
 - Input: 9V DC center-negative barrel jack
 - Regulation: 5V linear regulator (7805 or equivalent)
-- Current requirements: ~200mA typical
+- Current requirements: ~85mA typical
 - Bypass capacitors for stable operation
 
 ### Outputs
