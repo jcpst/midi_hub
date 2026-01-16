@@ -148,7 +148,7 @@ Same pinout, but receives signal through optocoupler.
 
 - **Input**: 9V DC (7-12V acceptable range)
 - **Polarity**: Center-negative
-- **Current**: 500mA minimum (~85mA typical draw)
+- **Current**: 500mA minimum power supply capacity (~85mA typical device draw)
 - **Regulated Output**: 5V DC
 - **Regulator**: 7805 (TO-220 package, 1A+ rating)
 
