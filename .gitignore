@@ -1,0 +1,44 @@
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Compiled object files
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.exe
+*.out
+
+# Precompiled Libraries
+lib/*.a
+lib/*.so
+lib/*.dll
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# CLion/JetBrains
+.idea/
+cmake-build-*/
+CMakeLists.txt.user
+
+# Logs
+*.log
+
+# Test output
+/test/*.out
+/test/*.log
+
+# Backup files
+*~
+*.swp
+*.bak
+
+# Misc
+*.pyc
+__pycache__/
+
