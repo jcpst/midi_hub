@@ -143,6 +143,11 @@ Per Output (4 outputs × 4 bytes = 16 bytes):
   - Input channel filter: 2 bytes (bitmask for channels 1-16)
   - Output channel remap: 1 byte (0-15, or 255 for no remap)
   - Reserved: 1 byte
+
+Phase 2 Expansion (planned):
+  - Extended output config: 4 outputs × 8 bytes = 32 bytes (0x1000-0x101F)
+  - Message sequences: 128 programs × 64 bytes = 8KB (0x1030-0x302F)
+  - See PHASE2_FEATURES.md for details
 ```
 
 ### Display Format
@@ -208,6 +213,15 @@ The WebMIDI browser interface provides:
 3. **Display Mode**: Toggle between PC number and Bank/Preset modes
 4. **Live Preview**: See changes reflected on display
 
+### Phase 2 Enhancements (Planned)
+
+The Phase 2 WebMIDI interface will add:
+- **Sequence Editor**: Program up to 16 MIDI messages per program (128 programs total)
+- **Advanced Output Control**: Configure passthrough and sequence playback per output
+- **Bulk Operations**: Copy, clear, import/export sequence configurations
+
+See [PHASE2_FEATURES.md](PHASE2_FEATURES.md) for complete interface mockups and specifications.
+
 ## Power Budget
 
 | Component | Current Draw (typical) |
@@ -235,10 +249,27 @@ The WebMIDI browser interface provides:
 
 ## Future Expansion Possibilities
 
-With 28KB of unused EEPROM space and available GPIO pins, potential features include:
+### Phase 2: Arbitrary MIDI Message Sequences (Planned)
+
+A comprehensive plan for Phase 2 features is documented in [PHASE2_FEATURES.md](PHASE2_FEATURES.md). This enhancement will allow the MIDI Hub to send programmable sequences of MIDI messages (CC, Note, PC) in response to incoming Program Change messages.
+
+**Key Phase 2 Capabilities**:
+- Up to 16 MIDI messages per program (128 programs total)
+- Support for CC, Note On/Off, and PC messages
+- Per-output control (passthrough original, play sequence, or both)
+- WebMIDI configuration interface for sequence editing
+- Uses 8KB of available EEPROM (20KB remains for future use)
+
+See [PHASE2_FEATURES.md](PHASE2_FEATURES.md) for complete specifications, use cases, and implementation details.
+
+### Additional Future Possibilities
+
+With remaining EEPROM space and available GPIO pins, potential features beyond Phase 2 include:
 - MIDI merge functionality
 - Additional MIDI outputs
 - Velocity curves
-- Note filtering/transpose
+- Note filtering/transpose with custom rules
 - MIDI clock generation/sync
 - Footswitch input for preset changes
+- SysEx message support
+- Conditional MIDI routing
